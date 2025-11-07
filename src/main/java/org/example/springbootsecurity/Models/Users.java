@@ -1,6 +1,8 @@
 package org.example.springbootsecurity.Models;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,4 +17,7 @@ public class Users {
     private int id;
     private String username;
     private String password;
+    private String role;
 }
+
+

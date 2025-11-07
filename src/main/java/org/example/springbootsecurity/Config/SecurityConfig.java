@@ -30,6 +30,8 @@ public class SecurityConfig {
         return http
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/login", "/register").permitAll()
+                        .requestMatchers("/user/**").hasRole("user")
+                        .requestMatchers("/admin/**").hasRole("admin")
                         .anyRequest().authenticated()
                 )
 //                .formLogin(Customizer.withDefaults())  // enables form login
