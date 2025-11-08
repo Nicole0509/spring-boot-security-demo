@@ -3,9 +3,18 @@ spring:
     name: spring-boot-security
 
   datasource:
+    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/springsecurity
     username: postgres
     password: Nicole0509
+
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
 
 server:
   port: 8089
